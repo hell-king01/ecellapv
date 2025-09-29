@@ -13,11 +13,11 @@ const renderMarkdown = (md: string) => {
   return lines.map((line, index) => {
     // Handle headers
     if (line.startsWith('# ')) {
-      return <h1 key={index} className="text-4xl md:text-5xl font-extrabold mb-5 hero-glow">{line.substring(2)}</h1>;
+      return <h1 key={index} className="text-3xl font-bold mb-4 mt-8 text-white">{line.substring(2)}</h1>;
     } else if (line.startsWith('## ')) {
-      return <h2 key={index} className="text-2xl md:text-3xl font-bold mb-4 text-neon-purple hero-glow">{line.substring(3)}</h2>;
+      return <h2 key={index} className="text-2xl font-semibold mb-3 mt-6 text-gray-200">{line.substring(3)}</h2>;
     } else if (line.startsWith('### ')) {
-      return <h3 key={index} className="text-xl md:text-2xl font-semibold mb-3 text-vibrant-purple hero-glow">{line.substring(4)}</h3>;
+      return <h3 key={index} className="text-xl font-medium mb-2 mt-4 text-gray-300">{line.substring(4)}</h3>;
     } else if (line.startsWith('- ')) {
       return <li key={index} className="ml-6 list-disc text-base mb-1">{line.substring(2)}</li>;
     } else if (line.match(/^\d+\. /)) {
@@ -89,22 +89,26 @@ const BlogDetail: React.FC = () => {
         </button>
 
         <article className="glass-card p-8 rounded-2xl">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 hero-glow">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             {post.title}
           </h1>
           
-          <div className="flex items-center mb-8 text-text-muted">
+          <div className="flex items-center mb-6 text-gray-400">
             <span className="font-semibold text-neon-purple">{post.author}</span>
             <span className="mx-2">•</span>
             <span>{post.date}</span>
           </div>
 
           {post.cover && (
-            <img
-              src={post.cover}
-              alt={post.title}
-              className="w-full h-64 md:h-96 object-cover rounded-xl mb-8"
-            />
+            <div className={`relative w-full max-w-2xl mx-auto my-8 ${post.id === '1' ? 'mt-0' : ''}`}>
+              <div className="aspect-video w-full">
+                <img
+                  src={post.cover}
+                  alt={post.title}
+                  className="w-full h-full object-cover rounded-xl shadow-lg"
+                />
+              </div>
+            </div>
           )}
 
           <div className="prose prose-invert max-w-none">
