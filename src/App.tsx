@@ -9,6 +9,7 @@ import Team from "./components/Team";
 // import CTA from './components/CTA';
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import AutoScrollToTop from "./components/AutoScrollToTop";
 // import Apvcouncil from "./pages/Apvcouncil";
 import RegistrationPage from "./pages/RegistrationPage";
 import PitchnovaPage from "./pages/PitchnovaPage";
@@ -50,6 +51,7 @@ function App() {
       <div className="min-h-screen bg-[#0D0D0D] text-white overflow-x-hidden relative">
         <Navigation />
         <ScrollToTop />
+        <AutoScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<EventsPage />} />
