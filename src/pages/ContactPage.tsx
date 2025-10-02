@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
@@ -181,7 +180,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

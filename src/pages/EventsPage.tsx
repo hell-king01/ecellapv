@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { Calendar, Users, ArrowRight } from "lucide-react";
 
@@ -183,8 +182,6 @@ const EventsPage: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };
