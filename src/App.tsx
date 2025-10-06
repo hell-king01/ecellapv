@@ -22,6 +22,7 @@ import BlogDetail from "./pages/BlogDetail";
 import WebsitesSlider from "./components/WebsitesSlider";
 import Incubatoin from "./components/incubation";
 import PitchnovaHighlight from "./components/PitchnovaHighlight";
+import IlluminatePage from "./pages/IlluminatePage";
 
 function Home() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/events/illuminate" element={<IlluminatePage />} />
         </Routes>
         <Footer />
       </div>

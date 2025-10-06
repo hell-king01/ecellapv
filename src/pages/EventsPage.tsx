@@ -5,11 +5,20 @@ import { Calendar, Users, ArrowRight } from "lucide-react";
 
 const events = [
   {
+    id: "illuminate",
+    title: "Illuminate",
+    date: "October 16, 2025",
+    description:
+      "An exclusive, high-energy workshop powered by E-Cell IIT Bombay to kickstart your entrepreneurial journey.",
+    button: "View Details",
+    path: "/events/illuminate",
+  },
+  {
     id: "pitchnova",
     title: "Pitchnova",
     date: "August 25, 2025",
     description:
-      "The ultimate pitch battle for student, startups and entrepreneurs.",
+      "The ultimate pitch battle for student startups and entrepreneurs.",
     button: "View Details",
     path: "/events/pitchnova",
   },
@@ -109,7 +118,7 @@ const EventsPage: React.FC = () => {
         ref={sectionRef}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-10"
       >
-        <div className="flex justify-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {events.map((event, index) => (
             <div
               key={event.id}
@@ -118,7 +127,7 @@ const EventsPage: React.FC = () => {
                 backdrop-blur-sm rounded-3xl border border-[#A259FF]/20 
                 overflow-hidden transition-all duration-500 hover:scale-105
                 hover:shadow-[0_20px_40px_rgba(162,89,255,0.3)]
-                hover:border-[#A259FF]/40 max-w-2xl w-full
+                hover:border-[#A259FF]/40 w-full
                 transform ${
                   isVisible
                     ? "translate-y-0 opacity-100"
