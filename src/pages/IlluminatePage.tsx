@@ -28,11 +28,11 @@ const IlluminatePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0D0D1F] text-white">
-      <div className="pt-24 pb-12 relative overflow-hidden">
+    <div className="min-h-screen bg-[#0D0D1F] text-white pt-20">
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#151522] to-[#0D0D1F]" />
         <div className="absolute inset-0 opacity-10 animate-pulse bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Back Button */}
           <button 
             onClick={() => navigate('/events')}
