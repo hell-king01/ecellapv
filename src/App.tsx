@@ -21,14 +21,14 @@ import BlogDetail from "./pages/BlogDetail";
 // import ContactCard2 from "./components/1ContactCard";
 import WebsitesSlider from "./components/WebsitesSlider";
 import Incubatoin from "./components/incubation";
-import PitchnovaHighlight from "./components/PitchnovaHighlight";
+import IlluminateHighlight from "./components/IlluminateHighlight";
 import IlluminatePage from "./pages/IlluminatePage";
 
 function Home() {
   return (
     <>
       <Hero />
-      <PitchnovaHighlight />
+      <IlluminateHighlight />
       <Agnelabout />
       <VisionMission />
       <Team />
