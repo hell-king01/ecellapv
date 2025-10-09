@@ -26,15 +26,15 @@ export const blogPosts = [
     date: "Monday, Oct 6, 2025",
     content: "## Introduction\n\nEntrepreneurship is often associated with innovation, technology, and profit. But a growing number of entrepreneurs are proving that business can also be a powerful tool for social change. This is the world of social entrepreneurship—where purpose and profit go hand in hand.\n\nIn this new era, entrepreneurs aren't just asking \"How can I earn?\" but \"How can I help?\" They're tackling real-world challenges like poverty, education, and sustainability—using business strategies instead of charity. This mindset is reshaping how we define success in business.\n\n## What Is Social Entrepreneurship?\n\nSocial entrepreneurship blends innovation with impact. It's about building ventures that solve problems while staying financially sustainable. Unlike traditional businesses that focus mainly on profit, social enterprises measure success in terms of both revenue and social value.\n\n## Why It Matters Today\n\n### Sustainability as a core value\nClimate change, inequality, and global health issues have made sustainability central to modern business. Companies like Patagonia lead by example, donating a portion of profits and prioritizing environmental responsibility over excessive growth.\n\n### Empowering communities\nSocial entrepreneurs often focus on creating opportunities for marginalized groups. For instance, Selco Solar in India provides affordable solar energy solutions to rural households, empowering communities while protecting the environment.\n\n### Shifting customer expectations\nModern consumers, especially Gen Z, prefer brands that care about ethics. Businesses like TOMS Shoes gained popularity through their \"One for One\" model, giving a pair of shoes to those in need for every pair sold.\n\n## Case Study: Ashoka and the Rise of Social Innovators\n\nFounded by Bill Drayton, Ashoka is a global organization that supports social entrepreneurs across the world. By funding innovators tackling issues in education, healthcare, and gender equality, Ashoka has proven that impactful entrepreneurship can thrive across diverse sectors.\n\n## \n\nThe entrepreneurs of today are redefining what it means to build a business. They are showing that success isn't just about market share—it's about making a difference. Whether it's a startup empowering women or a company promoting sustainability, the social side of entrepreneurship is shaping a more responsible future."
   },
-  // {
-  //   id: "4",
-  //   cover: "",
-  //   title: "Blog Title 4",
-  //   excerpt: "Blog excerpt goes here. This is a placeholder for the blog post summary.",
-  //   author: "Author Name",
-  //   date: "MMM DD, YYYY",
-  //   content: "# Blog Title 4\n  // \n  // This is a placeholder blog post content. Replace this with your actual blog post content.\n  // \n  // You can add more paragraphs, images, and other markdown elements here."
-  // },
+  {
+    id: "4",
+    cover: "/blog4-cover.jpeg",
+    title: "Networks, Mentors, and the Power of Collaboration",
+    excerpt: "Discover how building strong networks and finding the right mentors can accelerate your entrepreneurial journey and lead to greater success.",
+    author: "E-Cell APV",
+    date: "Thursday, Oct 9, 2025",
+    content: "# Networks, Mentors, and the Power of Collaboration\n\n## Introduction\n\nNo entrepreneur succeeds alone. Behind every great founder is a web of mentors, partners, and collaborators who shape their journey. Entrepreneurship may look like a solo adventure, but in truth, it thrives on connections—the relationships that guide decisions, open doors, and provide support when things get tough.\n\n## Why Networks Matter\n\nNetworks act as the invisible foundation of a startup. They connect entrepreneurs to investors, customers, and even competitors who help them grow. Reid Hoffman, co-founder of LinkedIn, once said, \"No one builds a business alone.\" His own platform became proof that meaningful connections can create entire ecosystems of opportunity.\n\n## The Role of Mentorship\n\nHaving a mentor can change everything. Mentors bring experience, perspective, and emotional support. When Steve Jobs mentored Mark Zuckerberg, their conversations helped shape Facebook's long-term vision. A good mentor doesn't give answers—they ask the right questions.\n\n## Collaboration Over Competition\n\nStartups that collaborate often innovate faster. For instance, Spotify's collaboration with Facebook allowed users to share music easily, helping both companies grow their reach. Collaboration doesn't weaken your vision—it strengthens your impact.\n\n\n\nEntrepreneurship isn't just about ideas—it's about people. Building and maintaining strong relationships can transform challenges into opportunities. In a world that celebrates individual success, real power lies in collective growth."
+  },
   // {
   //   id: "5",
   //   cover: "",

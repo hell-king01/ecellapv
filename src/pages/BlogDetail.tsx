@@ -3,13 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
 import '../index.css';
 
-// Calculate reading time in minutes
-const calculateReadingTime = (text: string): number => {
-  const wordsPerMinute = 200;
-  const wordCount = text.split(/\s+/).length;
-  return Math.ceil(wordCount / wordsPerMinute);
-};
-
 // Simple markdown renderer for the blog content
 const renderMarkdown = (md: string) => {
   if (!md) return null;
@@ -67,9 +60,7 @@ const BlogDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const post = blogPosts.find((p) => p.id === id);
-  
-  const readingTime = useMemo(() => post ? calculateReadingTime(post.content) : 0, [post]);
-  
+    
   // Get related posts (excluding current post)
   const relatedPosts = useMemo(() => {
     if (!post) return [];
@@ -136,12 +127,6 @@ const BlogDetail: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               {post.date}
-            </div>
-            <div className="flex items-center">
-              <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              {readingTime} min read
             </div>
           </div>
           
@@ -210,7 +195,6 @@ const BlogDetail: React.FC = () => {
                     <div className="flex items-center text-xs text-gray-500">
                       <span>{relatedPost.date.split(',')[0]}</span>
                       <span className="mx-2">•</span>
-                      <span>{calculateReadingTime(relatedPost.content)} min read</span>
                     </div>
                   </div>
                 </div>
