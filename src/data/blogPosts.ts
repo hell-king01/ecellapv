@@ -35,15 +35,15 @@ export const blogPosts = [
     date: "Thursday, Oct 9, 2025",
     content: "## Introduction\n\nNo entrepreneur succeeds alone. Behind every great founder is a web of mentors, partners, and collaborators who shape their journey. Entrepreneurship may look like a solo adventure, but in truth, it thrives on connections—the relationships that guide decisions, open doors, and provide support when things get tough.\n\n## Why Networks Matter\n\nNetworks act as the invisible foundation of a startup. They connect entrepreneurs to investors, customers, and even competitors who help them grow. Reid Hoffman, co-founder of LinkedIn, once said, \"No one builds a business alone.\" His own platform became proof that meaningful connections can create entire ecosystems of opportunity.\n\n## The Role of Mentorship\n\nHaving a mentor can change everything. Mentors bring experience, perspective, and emotional support. When Steve Jobs mentored Mark Zuckerberg, their conversations helped shape Facebook's long-term vision. A good mentor doesn't give answers—they ask the right questions.\n\n## Collaboration Over Competition\n\nStartups that collaborate often innovate faster. For instance, Spotify's collaboration with Facebook allowed users to share music easily, helping both companies grow their reach. Collaboration doesn't weaken your vision—it strengthens your impact.\n\n\n\nEntrepreneurship isn't just about ideas—it's about people. Building and maintaining strong relationships can transform challenges into opportunities. In a world that celebrates individual success, real power lies in collective growth."
   },
-  // {
-  //   id: "5",
-  //   cover: "",
-  //   title: "Blog Title 5",
-  //   excerpt: "Blog excerpt goes here. This is a placeholder for the blog post summary.",
-  //   author: "Author Name",
-  //   date: "MMM DD, YYYY",
-  //   content: "# Blog Title 5\n  // \n  // This is a placeholder blog post content. Replace this with your actual blog post content.\n  // \n  // You can add more paragraphs, images, and other markdown elements here."
-  // },
+  {
+    id: "5",
+    cover: "/blog5-cover.jpeg",
+    title: "Money Matters – Myths and Realities of Startup Funding",
+    excerpt: "Uncover the truths behind startup funding, from bootstrapping to venture capital, and learn how to navigate the financial journey of entrepreneurship.",
+    author: "E-Cell APV",
+    date: "Monday, Oct 13, 2025",
+    content: "## Introduction\n\nEvery entrepreneur dreams big, but dreams need resources to come alive. Funding is one of the biggest hurdles startups face, often surrounded by myths like \"you need millions to start\" or \"only investors can make you successful.\" The truth is more nuanced—money matters, but so does how you manage it.\n\n## Bootstrapping vs. External Funding\n\nSome founders prefer bootstrapping—building their startup with personal savings and early profits. Zoho and Mailchimp grew into global giants without external investors by focusing on sustainable growth. On the other hand, companies like Swiggy or Flipkart leveraged venture capital to scale rapidly. Both models work, depending on your goals and risk appetite.\n\n## The Funding Stages\n\n1. **Seed Funding**: Small initial capital, often from friends, family, or incubators.\n2. **Angel Investors**: Individuals investing in early-stage startups for equity.\n3. **Venture Capital**: Institutional investment to accelerate scaling.\n4. **IPO or Acquisition**: The final stage where startups either go public or get acquired.\n\n## Myths About Funding\n\n- \"Investors will fix everything.\" – They won't; execution still matters.\n- \"I need funding to start.\" – Many successful founders begin small and grow organically.\n- \"Money guarantees success.\" – Overfunding can sometimes kill creativity and agility.\n\n## Case Study: BYJU'S Journey\n\nBYJU'S, one of India's biggest edtech startups, began as a small coaching class. It scaled massively through multiple funding rounds but also faced challenges managing fast growth—showing how funding can be both an opportunity and a responsibility.\n\n## \n\nMoney fuels ideas, but discipline, strategy, and vision keep them alive. Whether bootstrapped or funded, startups succeed when founders value sustainability over speed."
+  },
   // {
   //   id: "6",
   //   cover: "",
