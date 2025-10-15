@@ -44,15 +44,15 @@ export const blogPosts = [
     date: "Monday, Oct 13, 2025",
     content: "## Introduction\n\nEvery entrepreneur dreams big, but dreams need resources to come alive. Funding is one of the biggest hurdles startups face, often surrounded by myths like \"you need millions to start\" or \"only investors can make you successful.\" The truth is more nuanced—money matters, but so does how you manage it.\n\n## Bootstrapping vs. External Funding\n\nSome founders prefer bootstrapping—building their startup with personal savings and early profits. Zoho and Mailchimp grew into global giants without external investors by focusing on sustainable growth. On the other hand, companies like Swiggy or Flipkart leveraged venture capital to scale rapidly. Both models work, depending on your goals and risk appetite.\n\n## The Funding Stages\n\n1. **Seed Funding**: Small initial capital, often from friends, family, or incubators.\n2. **Angel Investors**: Individuals investing in early-stage startups for equity.\n3. **Venture Capital**: Institutional investment to accelerate scaling.\n4. **IPO or Acquisition**: The final stage where startups either go public or get acquired.\n\n## Myths About Funding\n\n- \"Investors will fix everything.\" – They won't; execution still matters.\n- \"I need funding to start.\" – Many successful founders begin small and grow organically.\n- \"Money guarantees success.\" – Overfunding can sometimes kill creativity and agility.\n\n## Case Study: BYJU'S Journey\n\nBYJU'S, one of India's biggest edtech startups, began as a small coaching class. It scaled massively through multiple funding rounds but also faced challenges managing fast growth—showing how funding can be both an opportunity and a responsibility.\n\n## \n\nMoney fuels ideas, but discipline, strategy, and vision keep them alive. Whether bootstrapped or funded, startups succeed when founders value sustainability over speed."
   },
-  // {
-  //   id: "6",
-  //   cover: "",
-  //   title: "Blog Title 6",
-  //   excerpt: "Blog excerpt goes here. This is a placeholder for the blog post summary.",
-  //   author: "Author Name",
-  //   date: "MMM DD, YYYY",
-  //   content: "# Blog Title 6\n  // \n  // This is a placeholder blog post content. Replace this with your actual blog post content.\n  // \n  // You can add more paragraphs, images, and other markdown elements here."
-  // },
+  {
+    id: "6",
+    cover: "/blog6-cover.jpeg",
+    title: "Fail Fast, Learn Faster – The Role of Failure in Entrepreneurship",
+    excerpt: "Discover why failure is not the opposite of success but a crucial part of the entrepreneurial journey, and learn how to turn setbacks into stepping stones.",
+    author: "E-Cell APV",
+    date: "Sunday, Oct 12, 2025",
+    content: "## Introduction\n\nFailure isn't the opposite of success—it's part of it. Every successful entrepreneur has faced rejection, loss, and uncertainty. What separates them from the rest is how they respond. Instead of fearing failure, great entrepreneurs treat it as a teacher.\n\n## Why Failure Matters\n\nFailure reveals weaknesses early, forcing entrepreneurs to adapt and grow. It builds resilience and sharpens judgment. When Thomas Edison was asked about his failed experiments, he famously said, \"I have not failed. I've just found 10,000 ways that won't work.\"\n\n## The \"Fail Fast\" Philosophy\n\nModern startups follow the \"fail fast\" approach—testing ideas quickly, learning from mistakes, and pivoting early. Instagram started as a location-based app called Burbn before focusing solely on photo sharing. That pivot made all the difference.\n\n## Learning from Mistakes\n\n- **Accept feedback** instead of defending your idea.\n- **Reflect on what went wrong** instead of blaming external factors.\n- **Adapt and move forward** instead of giving up.\n\n## Case Study: Airbnb's Rocky Start\n\nIn its early days, Airbnb struggled to attract users and nearly shut down. But its founders used each failure as feedback—improving their website, understanding customer needs, and eventually creating one of the most successful hospitality brands in the world.\n\n## \n\nFailure doesn't define you—your reaction to it does. The best entrepreneurs don't avoid mistakes; they build stronger versions of themselves through them. In the end, every failure brings you one step closer to success."
+  },
   // {
   //   id: "7",
   //   cover: "",
