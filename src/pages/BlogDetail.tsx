@@ -114,7 +114,20 @@ const BlogDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{ textShadow: 'none' }}>
+      <style>{`
+        .blog-detail-content h1,
+        .blog-detail-content h2,
+        .blog-detail-content h3,
+        .blog-detail-content h4,
+        .blog-detail-content h5,
+        .blog-detail-content h6,
+        .blog-detail-content p,
+        .blog-detail-content span,
+        .blog-detail-content div {
+          text-shadow: none !important;
+        }
+      `}</style>
       <div className="bg-white border-b border-gray-100 sticky top-0 z-10 backdrop-blur-sm bg-white/95">
         <div className="max-w-4xl mx-auto px-6 py-6">
           <button
@@ -139,7 +152,7 @@ const BlogDetail: React.FC = () => {
         </div>
       </div>
 
-      <article className="max-w-4xl mx-auto px-6 py-16 md:py-20">
+      <article className="max-w-4xl mx-auto px-6 py-16 md:py-20 blog-detail-content">
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
             {post.title}
