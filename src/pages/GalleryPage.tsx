@@ -13,6 +13,8 @@ const categories = [
   { id: 'pitchnova', name: 'Pitchnova' },
   { id: 'seminar', name: 'Seminar' },
   { id: 'quiznova', name: 'Quiznova' },
+  { id: 'grpdis', name: 'Group Discussion' },
+  { id: 'lnkdinpres', name: 'LinkedIn Presentation' },
   { id: 'illuminate', name: 'Illuminate' },
 ];
 
@@ -21,39 +23,50 @@ const allImages: ImageType[] = [
   // Team photo
   { id: 0, src: '/group photo.png', category: 'team' },
   
+  //Group Discussion images
+  { id: 1, src: '/grpdis1.jpg', category: 'grpdis' },
+  { id: 2, src: '/grpdis2.JPG', category: 'grpdis' },
+
+  //LinkedIn Presentation images
+  { id: 3, src: '/lnkdinpress1.JPG', category: 'lnkdinpres' },
+  { id: 4, src: '/lnkdinpress2.JPG', category: 'lnkdinpres' },
+  { id: 5, src: '/lnkdinpress3.JPG', category: 'lnkdinpres' },
+  { id: 6, src: '/lnkdinpress4.png', category: 'lnkdinpres' },
+  { id: 7, src: '/lnkdinpress5.png', category: 'lnkdinpres' },
+
   // Illuminate images
-  { id: 1, src: '/illu1.jpeg', category: 'illuminate' },
-  { id: 2, src: '/illu2.jpeg', category: 'illuminate' },
-  { id: 3, src: '/illu3.jpeg', category: 'illuminate' },
-  { id: 4, src: '/illu4.jpeg', category: 'illuminate' },
-  { id: 5, src: '/illu5.jpeg', category: 'illuminate' },
-  { id: 6, src: '/illu6.jpeg', category: 'illuminate' },
-  { id: 7, src: '/illu7.jpeg', category: 'illuminate' },
-  { id: 8, src: '/illu8.jpeg', category: 'illuminate' },
+  { id: 8, src: '/illu1.jpeg', category: 'illuminate' },
+  { id: 9, src: '/illu2.jpeg', category: 'illuminate' },
+  { id: 10, src: '/illu3.jpeg', category: 'illuminate' },
+  { id: 11, src: '/illu4.jpeg', category: 'illuminate' },
+  { id: 12, src: '/illu5.jpeg', category: 'illuminate' },
+  { id: 13, src: '/illu6.jpeg', category: 'illuminate' },
+  { id: 14, src: '/illu7.jpeg', category: 'illuminate' },
+  { id: 15, src: '/illu8.jpeg', category: 'illuminate' },
   
   // Pitchnova images
-  { id: 9, src: '/pitch1.jpeg', category: 'pitchnova' },
-  { id: 10, src: '/pitch2.jpeg', category: 'pitchnova' },
-  { id: 11, src: '/pitch3.jpeg', category: 'pitchnova' },
-  { id: 12, src: '/pitch4.jpeg', category: 'pitchnova' },
-  { id: 13, src: '/pitch5.jpeg', category: 'pitchnova' },
-  { id: 14, src: '/pitch6.jpeg', category: 'pitchnova' },
-  { id: 15, src: '/pitch7.jpeg', category: 'pitchnova' },
-  { id: 16, src: '/pitch8.jpeg', category: 'pitchnova' },
-  { id: 17, src: '/pitch9.jpeg', category: 'pitchnova' },
+  { id: 16, src: '/pitch1.jpeg', category: 'pitchnova' },
+  { id: 17, src: '/pitch2.jpeg', category: 'pitchnova' },
+  { id: 18, src: '/pitch3.jpeg', category: 'pitchnova' },
+  { id: 19, src: '/pitch4.jpeg', category: 'pitchnova' },
+  { id: 20, src: '/pitch5.jpeg', category: 'pitchnova' },
+  { id: 21, src: '/pitch6.jpeg', category: 'pitchnova' },
+  { id: 22, src: '/pitch7.jpeg', category: 'pitchnova' },
+  { id: 23, src: '/pitch8.jpeg', category: 'pitchnova' },
+  { id: 24, src: '/pitch9.jpeg', category: 'pitchnova' },
   
   // Seminar images
-  { id: 18, src: '/semin1.jpeg', category: 'seminar' },
-  { id: 19, src: '/semin2.jpeg', category: 'seminar' },
-  { id: 20, src: '/semin3.jpeg', category: 'seminar' },
-  { id: 21, src: '/semin4.jpeg', category: 'seminar' },
+  { id: 25, src: '/semin1.jpeg', category: 'seminar' },
+  { id: 26, src: '/semin2.jpeg', category: 'seminar' },
+  { id: 27, src: '/semin3.jpeg', category: 'seminar' },
+  { id: 28, src: '/semin4.jpeg', category: 'seminar' },
   
   // Quiz Nova images
-  { id: 22, src: '/quizn1.jpeg', category: 'quiznova' },
-  { id: 23, src: '/quizn2.jpeg', category: 'quiznova' },
-  { id: 24, src: '/quizn3.jpeg', category: 'quiznova' },
-  { id: 25, src: '/quizn4.jpeg', category: 'quiznova' },
-  { id: 26, src: '/quizn5.jpeg', category: 'quiznova' },
+  { id: 29, src: '/quizn1.jpeg', category: 'quiznova' },
+  { id: 30, src: '/quizn2.jpeg', category: 'quiznova' },
+  { id: 31, src: '/quizn3.jpeg', category: 'quiznova' },
+  { id: 32, src: '/quizn4.jpeg', category: 'quiznova' },
+  { id: 33, src: '/quizn5.jpeg', category: 'quiznova' },
 ];
 
 // Helper function to shuffle array using Fisher-Yates algorithm
