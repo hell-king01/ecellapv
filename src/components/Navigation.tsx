@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Calendar } from "lucide-react";
+import { Menu, X, Calendar, Image as ImageIcon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -10,6 +10,7 @@ const Navigation = () => {
   const navItems = [
     { id: "home", path: "/", label: "Home" },
     { id: "events", path: "/events", label: "Events", icon: Calendar },
+    { id: "gallery", path: "/gallery", label: "Gallery", icon: ImageIcon },
     { id: "blog", path: "/blog", label: "Blog" },
     { id: "contact", path: "/contact", label: "Contact Us" },
   ];

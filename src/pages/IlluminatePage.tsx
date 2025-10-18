@@ -9,10 +9,8 @@ const IlluminatePage: React.FC = () => {
     date: '16th Oct 2025',
     time: '10am-4pm',
     venue: 'Seminar Hall, Agnel Polytechnic Vashi',
-    fee: '₹700',
-    registrationLink: 'https://forms.gle/LrvXyt8DBXkHZU2s6',
-    brochureLink: 'https://drive.google.com/file/d/1P3cdSsxc5_9R8GC0RperV3xUW6BZLhkA/view?usp=sharing',
-    whatsappLink: 'https://chat.whatsapp.com/GAyhnK3Y9RsKlLfPCjyX9l',
+    status: 'Event Concluded',
+    brochureLink: 'https://drive.google.com/file/d/1P3cdSsxc5_9R8GC0RperV3xUW6BZLhkA/view?usp=sharing'
   };
 
   const contacts = [
@@ -63,10 +61,9 @@ const IlluminatePage: React.FC = () => {
                   <li className="flex items-center gap-4"><Calendar className="w-5 h-5 text-[#A259FF]" /> <span>{details.date}</span></li>
                   <li className="flex items-center gap-4"><Zap className="w-5 h-5 text-[#A259FF]" /> <span>{details.time}</span></li>
                   <li className="flex items-center gap-4"><MapPin className="w-5 h-5 text-[#A259FF]" /> <span>{details.venue}</span></li>
-                  <li className="flex items-center gap-4"><Ticket className="w-5 h-5 text-[#A259FF]" /> <span>Fee: {details.fee}</span></li>
-                  <li className="flex items-center gap-4 text-red-400 font-medium">
-                    <div className="w-2 h-2 bg-red-400 rounded-full animate-ping mr-3"></div>
-                    <span>Registration Deadline: October 7, 2025</span>
+                  <li className="flex items-center gap-4 text-yellow-400 font-medium">
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
+                    <span>{details.status}</span>
                   </li>
                 </ul>
               </div>
@@ -103,30 +100,20 @@ const IlluminatePage: React.FC = () => {
                 ))}
               </div>
 
-              {/* Registration Deadline Notice */}
-              <div className="mt-6 mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0">
-                    <div className="w-3 h-3 bg-red-400 rounded-full animate-ping"></div>
-                  </div>
-                  <p className="text-red-300 font-medium">
-                    ⏰ <span className="font-bold">Hurry!</span> Registration closes on October 7, 2025 at 11:59 PM IST
-                  </p>
+              {/* Event Status */}
+              <div className="mt-8 p-6 bg-gradient-to-r from-[#A259FF]/10 to-[#872ff7]/10 rounded-2xl text-center">
+                <h3 className="text-2xl font-bold text-white mb-2">Event Concluded</h3>
+                <p className="text-gray-300">Thank you to everyone who participated in Illuminate 2025!</p>
+                <div className="mt-4">
+                  <a 
+                    href={details.brochureLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-block bg-transparent border-2 border-[#A259FF] text-[#A259FF] hover:bg-[#A259FF] hover:text-white py-2 px-6 rounded-lg font-semibold transition-colors duration-300"
+                  >
+                    View Event Brochure
+                  </a>
                 </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-wrap gap-4 mt-4">
-                <a href={details.registrationLink} target="_blank" rel="noopener noreferrer" className="flex-1 text-center bg-gradient-to-r from-[#A259FF] to-[#872ff7] text-white py-3 px-6 rounded-lg font-semibold hover:scale-105 transition-transform duration-300">
-                  Register Now
-                </a>
-                <a href={details.brochureLink} target="_blank" rel="noopener noreferrer" className="flex-1 text-center bg-transparent border-2 border-[#A259FF] text-[#A259FF] py-3 px-6 rounded-lg font-semibold hover:bg-[#A259FF]/10 transition-colors duration-300">
-                  View Brochure
-                </a>
-                <a href={details.whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full text-center bg-green-500/20 text-green-300 py-3 px-6 rounded-lg font-semibold hover:bg-green-500/30 transition-colors duration-300 flex items-center justify-center gap-2">
-                  <MessageCircle className="w-5 h-5" />
-                  Join WhatsApp Group
-                </a>
               </div>
             </div>
           </div>

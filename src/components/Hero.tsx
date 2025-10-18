@@ -207,16 +207,6 @@ const Hero = () => {
           >
             Our Vision
           </button>
-
-          <button
-            onClick={() => (window.location.href = "/events/illuminate")}
-            className="w-full sm:w-auto bg-gradient-to-r from-[#A259FF] to-[#872ff7] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-full transition-all duration-300 hover:scale-105 border-none cursor-pointer relative overflow-hidden group"
-          >
-            <span className="relative z-10 flex items-center justify-center gap-2">
-              ✨ ILLUMINATE'25
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#872ff7] to-[#A259FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
         </div>
       </div>
 

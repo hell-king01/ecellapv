@@ -7,20 +7,22 @@ const events = [
   {
     id: "illuminate",
     title: "Illuminate",
-    date: "October 16, 2025",
+    date: "Event Concluded",
     description:
-      "An exclusive, high-energy workshop powered by E-Cell IIT Bombay to kickstart your entrepreneurial journey.",
+      "Thank you for participating in our exclusive workshop powered by E-Cell IIT Bombay!",
     button: "View Details",
     path: "/events/illuminate",
+    isOver: true
   },
   {
     id: "pitchnova",
     title: "Pitchnova",
-    date: "August 25, 2025",
+    date: "Event Concluded",
     description:
-      "The ultimate pitch battle for student startups and entrepreneurs.",
+      "The pitch battle has ended. Stay tuned for more exciting events!",
     button: "View Details",
     path: "/events/pitchnova",
+    isOver: true
   },
 ];
 

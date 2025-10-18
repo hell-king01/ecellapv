@@ -21,14 +21,13 @@ import BlogDetail from "./pages/BlogDetail";
 // import ContactCard2 from "./components/1ContactCard";
 import WebsitesSlider from "./components/WebsitesSlider";
 import Incubatoin from "./components/incubation";
-import IlluminateHighlight from "./components/IlluminateHighlight";
 import IlluminatePage from "./pages/IlluminatePage";
+import GalleryPage from "./pages/GalleryPage";
 
 function Home() {
   return (
     <>
       <Hero />
-      <IlluminateHighlight />
       <Agnelabout />
       <VisionMission />
       <Team />
@@ -63,6 +62,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/events/illuminate" element={<IlluminatePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
         </Routes>
         <Footer />
       </div>

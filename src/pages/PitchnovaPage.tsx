@@ -192,23 +192,10 @@ const PitchnovaPage: React.FC = () => {
             The Ultimate Startup Pitching Competition
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
-            <button
-              className="group bg-gradient-to-r from-[#A259FF] to-[#872ff7] px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-3 shadow-2xl hover:scale-105 transform transition-all duration-300 hover:shadow-[#A259FF]/50"
-              onClick={() =>
-                window.open("https://forms.gle/EVmkuVPc1dQDTRnY9", "_blank")
-              }
-            >
-              <Users className="w-6 h-6" />
-              Register Now
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            <div className="flex items-center gap-2 bg-red-500/20 border border-red-500/30 rounded-full px-4 py-2 animate-pulse">
-              <Clock className="w-5 h-5 text-red-400" />
-              <span className="text-red-300 font-medium">
-                Deadline: August 16, 2025 11:59 AM
-              </span>
+          <div className="mb-12">
+            <div className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-500/30 text-yellow-300 px-6 py-3 rounded-full font-medium">
+              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+              <span>Event Concluded - Thank you for participating!</span>
             </div>
           </div>
         </section>
@@ -745,16 +732,18 @@ const PitchnovaPage: React.FC = () => {
               journey begins here.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-              <button
-                className="group bg-gradient-to-r from-[#A259FF] to-[#872ff7] px-10 py-4 text-xl font-semibold rounded-full flex items-center gap-3 shadow-2xl hover:scale-105 transform transition-all duration-300"
-                onClick={() =>
-                  window.open("https://forms.gle/P1fUN8e55fLfY5py7", "_blank")
-                }
-              >
-                <Users className="w-6 h-6" />
-                Register Your Team
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <div className="bg-gradient-to-r from-[#A259FF]/10 via-[#872ff7]/10 to-[#ff6b9d]/10 rounded-3xl p-12 border border-[#A259FF]/20 backdrop-blur-md">
+                <h2 className="text-4xl font-bold text-white mb-4">
+                  Event Concluded
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Thank you for participating in Pitchnova 2025! We appreciate your enthusiasm and innovative ideas.
+                </p>
+                <div className="flex items-center justify-center gap-3 text-yellow-300">
+                  <Trophy className="w-6 h-6" />
+                  <span>Winners will be announced soon!</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -764,49 +753,41 @@ const PitchnovaPage: React.FC = () => {
         <Footer />
       </div>
 
-      <style>{`
-        @keyframes gradient-x {
-          0%,
-          100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
+  <style>{`
+    @keyframes gradient-x {
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
 
-        @keyframes spin-slow {
-          from {
-            transform: translate(-50%, -50%) rotate(0deg);
-          }
-          to {
-            transform: translate(-50%, -50%) rotate(360deg);
-          }
-        }
+    @keyframes spin-slow {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
 
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .animate-gradient-x {
-          background-size: 200% 200%;
-          animation: gradient-x 4s ease infinite;
-        }
-
-        .animate-spin-slow {
-          animation: spin-slow 20s linear infinite;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.5s ease-out;
-        }
+    .animate-gradient-x {
+      background-size: 200% 200%;
+      animation: gradient-x 4s ease infinite;
+    }
 
         /* Custom breakpoint for very small screens */
         @media (min-width: 480px) {
