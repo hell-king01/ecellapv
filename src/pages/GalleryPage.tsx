@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
 
 type ImageType = {
@@ -10,29 +10,77 @@ type ImageType = {
 const categories = [
   { id: 'all', name: 'All' },
   { id: 'team', name: 'Team' },
-  { id: 'bts', name: 'Behind The Scenes' },
-  { id: 'illuminate', name: 'Illuminate' },
   { id: 'pitchnova', name: 'Pitchnova' },
-  { id: 'other', name: 'Other Events' }
+  { id: 'seminar', name: 'Seminar' },
+  { id: 'quiznova', name: 'Quiznova' },
+  { id: 'illuminate', name: 'Illuminate' },
 ];
 
-// Sample images - replace with your actual image paths
+// Gallery images organized by category
 const allImages: ImageType[] = [
-  { id: 1, src: '/images/gallery/team1.jpg', category: 'team' },
-  { id: 2, src: '/images/gallery/team2.jpg', category: 'team' },
-  { id: 3, src: '/images/gallery/bts1.jpg', category: 'bts' },
-  { id: 4, src: '/images/gallery/illuminate1.jpg', category: 'illuminate' },
-  { id: 5, src: '/images/gallery/pitchnova1.jpg', category: 'pitchnova' },
-  { id: 6, src: '/images/gallery/event1.jpg', category: 'other' },
+  // Team photo
+  { id: 0, src: '/group photo.png', category: 'team' },
+  
+  // Illuminate images
+  { id: 1, src: '/illu1.jpeg', category: 'illuminate' },
+  { id: 2, src: '/illu2.jpeg', category: 'illuminate' },
+  { id: 3, src: '/illu3.jpeg', category: 'illuminate' },
+  { id: 4, src: '/illu4.jpeg', category: 'illuminate' },
+  { id: 5, src: '/illu5.jpeg', category: 'illuminate' },
+  { id: 6, src: '/illu6.jpeg', category: 'illuminate' },
+  { id: 7, src: '/illu7.jpeg', category: 'illuminate' },
+  { id: 8, src: '/illu8.jpeg', category: 'illuminate' },
+  
+  // Pitchnova images
+  { id: 9, src: '/pitch1.jpeg', category: 'pitchnova' },
+  { id: 10, src: '/pitch2.jpeg', category: 'pitchnova' },
+  { id: 11, src: '/pitch3.jpeg', category: 'pitchnova' },
+  { id: 12, src: '/pitch4.jpeg', category: 'pitchnova' },
+  { id: 13, src: '/pitch5.jpeg', category: 'pitchnova' },
+  { id: 14, src: '/pitch6.jpeg', category: 'pitchnova' },
+  { id: 15, src: '/pitch7.jpeg', category: 'pitchnova' },
+  { id: 16, src: '/pitch8.jpeg', category: 'pitchnova' },
+  { id: 17, src: '/pitch9.jpeg', category: 'pitchnova' },
+  
+  // Seminar images
+  { id: 18, src: '/semin1.jpeg', category: 'seminar' },
+  { id: 19, src: '/semin2.jpeg', category: 'seminar' },
+  { id: 20, src: '/semin3.jpeg', category: 'seminar' },
+  { id: 21, src: '/semin4.jpeg', category: 'seminar' },
+  
+  // Quiz Nova images
+  { id: 22, src: '/quizn1.jpeg', category: 'quiznova' },
+  { id: 23, src: '/quizn2.jpeg', category: 'quiznova' },
+  { id: 24, src: '/quizn3.jpeg', category: 'quiznova' },
+  { id: 25, src: '/quizn4.jpeg', category: 'quiznova' },
+  { id: 26, src: '/quizn5.jpeg', category: 'quiznova' },
 ];
+
+// Helper function to shuffle array using Fisher-Yates algorithm
+const shuffleArray = (array: any[]) => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
 
 const GalleryPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [shuffledImages, setShuffledImages] = useState<ImageType[]>(allImages);
+
+  // Shuffle images when 'all' category is selected
+  useEffect(() => {
+    if (selectedCategory === 'all') {
+      setShuffledImages(shuffleArray([...allImages]));
+    }
+  }, [selectedCategory]);
 
   const filteredImages = selectedCategory === 'all' 
-    ? allImages 
+    ? shuffledImages 
     : allImages.filter(img => img.category === selectedCategory);
 
   const openLightbox = (index: number) => {
@@ -92,9 +140,17 @@ const GalleryPage = () => {
                           transition-transform duration-300 hover:scale-103"
                 onClick={() => openLightbox(index)}
               >
-                <div className="w-full h-full flex flex-col items-center justify-center">
-                  <ImageIcon className="w-12 h-12 text-gray-500" />
-                  <span className="text-gray-400 text-sm mt-2">{image.category}</span>
+                <div className="w-full h-full flex items-center justify-center overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={`${image.category} ${image.id}`}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxZDI0MmUiLz48dGV4dCB4PSIzNSIgeT0iNTUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSIjN2c4Y2FmIj5JbWFnZSBub3QgZm91bmQ8L3RleHQ+PC9zdmc+';
+                    }}
+                  />
                 </div>
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
@@ -147,10 +203,21 @@ const GalleryPage = () => {
             </button>
 
             <div className="max-w-4xl w-full">
-              <div className="w-full aspect-video bg-gray-800/50 rounded-lg flex flex-col items-center justify-center">
-                <ImageIcon className="w-16 h-16 text-gray-500" />
-                <p className="text-gray-400 mt-2">Image preview: {selectedImage.category}</p>
+              <div className="w-full max-h-[80vh] rounded-lg overflow-hidden">
+                <img
+                  src={selectedImage.src}
+                  alt={`${selectedImage.category} ${selectedImage.id}`}
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxZDI0MmUiLz48dGV4dCB4PSIzNSIgeT0iNTUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSIjN2c4Y2FmIj5JbWFnZSBub3QgZm91bmQ8L3RleHQ+PC9zdmc+';
+                  }}
+                />
               </div>
+              <p className="text-gray-400 text-center mt-4">
+                {selectedImage.category.charAt(0).toUpperCase() + selectedImage.category.slice(1)} - Image {selectedImage.id}
+              </p>
             </div>
 
             <button
